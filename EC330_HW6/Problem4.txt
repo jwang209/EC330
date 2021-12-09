@@ -1,0 +1,19 @@
+Name & Collaborator Name: Jason Wang & Luke Bacopoulos
+BU ID Used for Problem3: U24497121
+
+main.cpp output:
+Longest Word Length: 124
+Valid Passwords: 18250736
+Number of valid dictionary words: 230488
+
+Explanation:
+a) We used noskipws to read over each individual character, incrementing count each time a character was read in. Then, when the character received was
+a white space, if the count was greater than the value stored in longest, it was stored into longest and the count was reset to 0 and the loop continued.
+
+b) We once again used noskipws, and within the loop, if the character was ever a lower case letter, the lower test would be switched to 1, and the
+subsequent upper case, digit, and length of the word tests were done the same way (If the count ever exceeded 20, the word_test was switched back
+to 0). Then, if the character received was a white space, the program checked to see if all the tests were switched to 1; if they were, pass was increased
+ by 1 and count and every test was reset back to 0.
+
+c) We used getline to get every word in the file. We then used a for loop to cycle over every character in the word, and if a lower or upper case instance of c, s, or b was encountered, the
+corresponding test would be switched to 1. After cycling through the whole word, if any of the tests were set to 0 and the string was not empty, count would increment by 1, and then every test would be switched back to 0.
